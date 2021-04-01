@@ -1,0 +1,22 @@
+{
+  "family": "customs-api",
+  "executionRoleArn": "arn:aws:iam::874989025392:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "name": "customs-api",
+      "image": "874989025392.dkr.ecr.us-east-1.amazonaws.com/customs-api:latest",
+      "portMappings": [
+        {
+          "containerPort": 3001,
+          "hostPort": 3001,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true
+    }
+  ],
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024"
+}
