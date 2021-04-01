@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest --watchAll",
+    "test:ci": "jest"
   },
   "dependencies": {
     "express": "^4.17.1"

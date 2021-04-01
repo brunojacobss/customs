@@ -6,6 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile.dev
     volumes:
+      - /app/node_modules
       - ./src:/app/src
     ports:
       - '3001:3001'
@@ -13,4 +14,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - ./src:/app/src
     command: 'yarn test'

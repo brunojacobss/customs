@@ -1,0 +1,13 @@
+name: tests
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: docker build -t customs/api -f Dockerfile.dev .
+      - run: docker run customs/api yarn test:ci
