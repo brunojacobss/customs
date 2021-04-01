@@ -1,4 +1,4 @@
-version: "3.7"
+version: '3.7'
 
 services:
   customs_server_dev:
@@ -8,4 +8,9 @@ services:
     volumes:
       - ./src:/app/src
     ports:
-      - "3001:3001"
+      - '3001:3001'
+  customs_server_test:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: 'yarn test'

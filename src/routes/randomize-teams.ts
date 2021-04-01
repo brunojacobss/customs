@@ -4,7 +4,7 @@ import { shuffleTeams } from '../utils/shuffle-teams';
 
 const routes = router();
 
-routes.get('/randomize-teams', (req: Request, res: Response) => {
+routes.get('/api/randomize-teams', (req: Request, res: Response) => {
   const teams = [
     { name: 'DarkestDungeoners', players: [], totalRank: 0 },
     { name: 'Factoriers', players: [], totalRank: 0 },
