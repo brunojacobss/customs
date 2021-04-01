@@ -1,4 +1,4 @@
-import { Player, Team } from '../types';
+import { Player, Team } from '../data/types';
 
 const sortPlayers = (players: Player[]) => {
   players.sort((a, b) => b.rank - a.rank);

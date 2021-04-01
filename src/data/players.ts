@@ -1,4 +1,4 @@
-import { Player, Ranks } from '../types';
+import { Player, Ranks } from './types';
 
 export const players: Player[] = [
   { name: 'Zere', rank: Ranks.Gay },
